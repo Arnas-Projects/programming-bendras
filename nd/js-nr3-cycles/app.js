@@ -149,9 +149,22 @@ console.log('\nTask #6');
 console.log('\nTask #7');
 
 const section7 = document.querySelector('section.task7-sect');
+let size = 400;
 
 for (i = 0; i < 14; i++) {
     
+    const div1 = document.createElement('div');
+    div1.classList.add('task7-div');
+    div1.style.width = size + 'px';
+    div1.style.height = size + 'px';
+    div1.style.margin = '25px';
+    div1.style.backgroundColor = randColor();
+    div1.style.position = 'absolute';
+    div1.style.top = '150px';
+    div1.style.left = '300px';
+    div1.style.transform = 'translate(-50%, -50%)';
+    section7.appendChild(div1);
+    size -= 25;
 }
 
 

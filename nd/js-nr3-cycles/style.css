@@ -86,8 +86,13 @@ div.span5-div {
 }
 
 
+section.task7-sect {
+    position: relative;
+}
+
 div.task7-div {
     display: inline-flex;
+    position: absolute;
 }
 
 
