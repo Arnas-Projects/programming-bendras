@@ -52,7 +52,6 @@ const printUserlist = users => {
         li.classList.add('vated');
         usersUl. appendChild(liVat);
     });
-
 };
 
 fetch('https://jsonplaceholder.typicode.com/users')

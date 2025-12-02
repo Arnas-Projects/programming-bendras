@@ -8,33 +8,156 @@ function rand(min, max) {
 }
 
 // atsitiktinės spalvos funkcija
-function randomColor() {
+function randColor() {
     return '#' + Math.floor(Math.random() * 16777215).toString(16).padEnd(6, '0');
 }
 
-
+let saugiklis = 500;
 
 
 // Task # 1 ---------------------------------------------------------------------------------------------------------
-console.log('Task #1');
+console.log('\nTask #1');
 
-const divasH1Task1 = document.querySelector('section.task1-section > div.h1-div');
-// const divasH4Task1 = document.querySelector('section.task1-section > div.h4-div');
+const container = document.querySelector('section.task1-section > div.h1-div');
 
-divasH1Task1.style.display = 'flex';
-// divasH4Task1.style.display = 'flex';
+container.style.display = 'flex';
 
 for (let i = 0; i < 14; i++) {
 
-    const h1Task1 = document.createElement('h1');
-    h1Task1.innerText = 4;
-    divasH1Task1.appendChild(h1Task1);
+    const h1 = document.createElement('h1');
+    h1.innerText = 4;
+    container.appendChild(h1);
+};
 
-    const h4Task1 = document.createElement('h4');
-    h4Task1.innerText = 1;
-    divasH1Task1.appendChild(h4Task1);
+for (let i = 0; i < 14; i++) {
+
+    const h4 = document.createElement('h4');
+    h4.innerText = 1;
+    container.appendChild(h4);
+};
+
+
+
+// Task # 2 ---------------------------------------------------------------------------------------------------------
+console.log('\nTask #2');
+
+const container2 = document.querySelector('div.task2-div');
+
+
+for (let i = 0; i < 44; i++) {
+
+    const randomNum = rand(14, 44);
+    const spanas = document.createElement('span');
+    spanas.innerText = randomNum + ' ';
+    container2.appendChild(spanas);
+
+    if (randomNum % 4 == 0) {
+        spanas.style.color = 'crimson';
+    } else {
+        spanas.style.color = 'cornflowerblue';
+    }
+
+    saugiklis--;
+    if (!saugiklis) {
+        console.log('Saugiklis suveikė');
+        break;
+    }
+}
+
+
+// Task # 3 ---------------------------------------------------------------------------------------------------------
+console.log('\nTask #3');
+
+const section3 = document.querySelector('section.task3-section');
+
+
+for (let i = 1; i <= 14; i++) {
+
+    let divText = 'Divukas ' + i;
+    const divas3 = document.createElement('div');
+    divas3.classList.add('task3-div');
+    divas3.innerText = divText;
+    section3.appendChild(divas3);
+}
+
+
+// Task # 4 ---------------------------------------------------------------------------------------------------------
+console.log('\nTask #4');
+
+const section4 = document.querySelector('section.task4-sect');
+
+for (let i = 1; i <= 14; i++) {
+
+    const divas4 = document.createElement('div');
+    let divText = 'Divas ' + i;
+    divas4.innerText = divText;
+    section4.appendChild(divas4);
+
+    if (i % 2 == 0) {
+        divas4.classList.add('task4-red')
+        divas4.innerText = divText + '\nšitas red';
+    } else {
+        divas4.classList.add('task4-blue');
+        divas4.innerText = divText + '\nšitas blue';
+    }
+}
+
+
+
+// Task # 5 ---------------------------------------------------------------------------------------------------------
+console.log('\nTask #5');
+
+const divNum1 = document.querySelector('div.span1-div');
+const divOperator = document.querySelector('div.span2-div');
+const divNum2 = document.querySelector('div.span3-div');
+const divEqual = document.querySelector('div.span4-div');
+const divRes = document.querySelector('div.span5-div');
+
+
+for (let i = 4; i <= 14; i++) {
+
+    const span1 = document.createElement('span');
+    divNum1.appendChild(span1);
+    span1.innerText = 4;
+
+    const span2 = document.createElement('span');
+    divOperator.appendChild(span2);
+    span2.innerText = 'x';
+
+    const span3 = document.createElement('span');
+    divNum2.appendChild(span3);
+    span3.innerText = i;
+
+    const span4 = document.createElement('span');
+    divEqual.appendChild(span4);
+    span4.innerText = '='; 
+
+    const span5 = document.createElement('span');
+    divRes.appendChild(span5);
+    let res = 4 * i;
+    span5.innerText = res;
+}
+
+
+
+// Task # 6 ---------------------------------------------------------------------------------------------------------
+console.log('\nTask #6');
+
+
+
+// Task # 7 ---------------------------------------------------------------------------------------------------------
+console.log('\nTask #7');
+
+const section7 = document.querySelector('section.task7-sect');
+
+for (i = 0; i < 14; i++) {
     
 }
+
+
+
+
+
 
 
 
