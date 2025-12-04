@@ -182,34 +182,50 @@ for (let i = 0; i < 41; i++) {
     section8.appendChild(symbolRow);
 
     for (let i2 = 0; i2 < 41; i2++) {
-        rowText += '■';
-        symbolRow.innerText = rowText;
+        rowText += '&#9632;';
+        symbolRow.innerHTML = rowText;
+    }
+}
+
+
+// Task # 9 ---------------------------------------------------------------------------------------------------------
+console.log('\nTask #9');
+
+const section9 = document.querySelector('section.task9-sect');
+
+for (let i = 0; i < 41; i++) {
+
+    const columnDiv = document.querySelector('div');
+    columnDiv.classList.add('.task9-div');
+    section9.appendChild(columnDiv);
+
+    for (let i2 = 0; i2 < 41; i2++) {
+        const spanCell = document.querySelector('span');
+        spanCell.classList.add('#task9-span');
+        spanCell.innerHTML = '&#9632;';
+
+        if (i === i2) {
+            spanCell.style.color = 'yellow';
+        }
+
+        if (i + i2 == 40) {
+            spanCell.style.color = 'yellow';
+        }
+
+        columnDiv.appendChild(spanCell);
     }
 }
 
 
 
-// const section8 = document.querySelector('section.task8-sect');
 
-// for (i = 0; i < 40; i++) {
-    
-//     const symbolRow = document.createElement('div');
-//     let rowText = '';
-//     symbolRow.classList.add('task8-div1');
-//     section8.appendChild(symbolRow);
 
-    
-//     for (i2 = 0; i2 < 41; i2++) {
 
-//         const symbolColumn = document.createElement('div');
-//         symbolColumn.classList.add('task8-div2');
-//         symbolColumn.innerText = '■';
-//         symbolRow.appendChild(symbolColumn);
-//     }
+// for (let i = 0; i < word3.length; i++) {
+//     const divas = document.createElement('div'); // sukuriam kiekvienai raidei divą
+//     divas.innerText = word3[i]; // pridedam į tą divą raidę
+//     h2Cycle.appendChild(divas); // divą su raide įkeliam į h2 tagą
 // }
-
-
-
 
 
 
