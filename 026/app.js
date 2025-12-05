@@ -226,22 +226,22 @@ if (random1 > 14 || random2 > 14) {
 // CIKLAI -----------------------------------------------------------------------------------------------------------
 console.log('\nCIKLAI');
 
-let zodis = "Karakumai";
+const zodis = "Karakumai";
 let word2 = '';
-let word3 = '';
+// let word3 = '';
 
 for (let i = 0; i < zodis.length; i = i + 2) { // arba i = i + 2 ;  einam kas du
     word2 = word2 + zodis[i];
-}
-
-for (let i = 0; i < zodis.length; i++) {
-    if (i % 2) {
-        continue;
-    }
-    word3 = word3 + zodis[i];
 };
 
-console.log(word2, word3);
+// for (let i = 0; i < zodis.length; i++) {
+//     if (i % 2) {
+//         continue;
+//     }
+//     word3 = word3 + zodis[i];
+// };
+
+console.log(word2);
 
 
 
