@@ -4,14 +4,13 @@
 body {
     background-color: #444;
     color: white;
-    height: 2000px;
 }
 
 h2 {
     color: burlywood;
 }
 
-section.task4-sect {
+section.task4-sect, section.task5-sect, section.task6-sect {
     display: flex;
     justify-content: center;
     row-gap: 50px;
@@ -33,6 +32,39 @@ div.task4-div {
     text-align: center;
     align-items: center;
 }
+
+div.task5-div {
+    box-sizing: border-box;
+    display: inline-flex;
+    margin: 10px;
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    border: 3px solid crimson;
+    background-color: #dc143cb0;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    line-height: 1.5;
+}
+
+div.task6-div {
+    box-sizing: border-box;
+    display: inline-flex;
+    margin: 10px;
+    width: 90px;
+    min-width: 90px;
+    height: 90px;
+    border: 3px solid green;
+    background-color: #008000b0;
+    border-radius: 50%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+
 
 
 

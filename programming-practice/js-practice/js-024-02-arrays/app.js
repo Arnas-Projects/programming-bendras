@@ -177,6 +177,8 @@ console.log(YoungAnimals);
 // 6. toSorted --- Naujo, surūšiuoto masyvo sudarymas ===> toSorted
 
 // 1-as variantas ---> paprastesnis, lengvesnis
+// console.log('\ntoSorted rūšiavimas');
+
 const SortedByAge = animals.toSorted((pirmas, antras) => {
     return pirmas.age - antras.name; // jeigu 'pirmas' > 'antras' - grąžins teigiamą skaičių, jeigu 'pirmas' < 'antras' - grąžins neigiamą
 });
@@ -186,6 +188,8 @@ const SortedByAge = animals.toSorted((pirmas, antras) => {
 
 
 //2-as variantas ---> truputį sudėtingesnis
+console.log('\ntoSorted rūšiavimas su if');
+
 const SortedByAge2 = animals.toSorted((a, b) => {
     if (a.age > b.age) {
         return -1;   // sukeičiam vietomis skaičius ir turime rūšiavimą iš priešingos pusės
@@ -201,6 +205,8 @@ console.log(SortedByAge, SortedByAge2);
 
 
 // 3-as variantas ---> Rūšiavimas pagal abėcėlę
+console.log('\n sort by name');
+
 const SortedByABC = animals.toSorted((pirmas, antras) => {
     return pirmas.name.localeCompare(antras.name); // jeigu 'pirmas' > 'antras' - grąžins teigiamą skaičių, jeigu 'pirmas' < 'antras' - grąžins neigiamą
 });
@@ -208,52 +214,60 @@ const SortedByABC = animals.toSorted((pirmas, antras) => {
 console.log(SortedByABC);
 
 
+animals.push(
+
+    {
+        name: 'Žąsis',
+        age: 2
+    },
+    {
+        name: 'Zebras',
+        age: 12
+    },
+    {
+        name: 'Šarka',
+        age: 6
+    },
+    {
+        name: 'Silkė',
+        age: 12
+    }
+);
+
+
+// RŪŠIAVIMAS PAGAL VARDĄ
+console.log('\nsort by name 1');
+
+// 1-as variantas - trumpesnis, lengvesnis
+const ByName = animals.toSorted((a, b) => {
+    return a.name.localeCompare(b.name, "lt");
+});
+
+console.log(ByName);
 
 
 
+console.log('\nsort by name 2 - su if');
+
+// 2-as variantas - ilgesnis, su if
+const ByName2 = animals.toSorted((a, b) => {
+    if (a.name > b.name) {
+        return 1;
+    }
+    if (a.name < b.name) {
+        return -1;
+    }
+    return 0;
+});
+
+console.log(ByName, ByName2);
 
 
+// sortina patį animals (originalų) masyvą
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+animals.sort((a, b) => {
+    return a.name.localeCompare(b.name, "lt");
+});
 
 
 
