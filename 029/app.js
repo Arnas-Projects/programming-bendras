@@ -98,6 +98,7 @@ nr2.addEventListener('click', _ => {
     const daugSkaiciuStringas = JSON.stringify(daugSkaiciu);
     localStorage.setItem('mano_skaiciai', daugSkaiciuStringas);
     renderList();  // šitas renderina kiekvieną kartą paspaudus mygtuką
+    console.log(daugSkaiciuStringas);
 });
 
 console.log(daugSkaiciu);
