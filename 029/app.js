@@ -60,12 +60,10 @@ nr1.addEventListener('click', _ => {
 // informacijos vizualus atvaizdavimas vadinamas renderinimu
 
 const renderList = _ => {
-
     const olTag = document.querySelector('ol');
     olTag.innerHTML = '';  // išvalau ol elementą
 
     daugSkaiciu.forEach(skaicius => {
-
         const liTag = document.createElement('li');
         liTag.innerText = skaicius;
         olTag.appendChild(liTag);
@@ -88,7 +86,6 @@ if (null === daugSkaiciu) {
 
 console.log(daugSkaiciu);
 
-let belekas = 2 + 2;
 
 const nr2 = document.querySelector('#nr2');
 

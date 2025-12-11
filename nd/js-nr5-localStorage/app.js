@@ -1,6 +1,10 @@
 
 
-
+function rand(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+}
 /*
 
     Yra trys mygtukai: žalias, mėlynas ir raudonas. Paspaudus vieną iš mygtukų jo spalva įsirašo
@@ -14,56 +18,96 @@ console.log('Task 1');
 
 // 1 etapas
 
-const greenColorSq = document.createElement('div');
-greenColorSq.classList.add('.green-div');
 
+// const greenColorSq = rand(5, 20);
+// const greenColorSq = document.createElement('div');
+// greenColorSq.classList.add('.green-div');
+
+// const greenColorSqString = JSON.stringify(greenColorSq);
+
+// localStorage.setItem('greenDiv', greenColorSqString);
+
+// const greenColorSqGautas = localStorage.getItem('greenDiv');
 
 // 2 etapas
-const renderSqColor = _ => {
+const renderColor = _ => {
     const olTag = document.querySelector('ol.color-list')
     olTag.innerHTML = '';
 
-    colorButton1.forEach(color => {
+    colorsList.forEach(color => {
+
         const liTag = document.createElement('li');
-        liTag.innerText = color;
+        liTag.style.width = '40px';
+        liTag.style.height = '40px';
+        liTag.style.color = ' white';
+        liTag.style.margin = '5px';
+        liTag.style.fontSize = '14px';
+        // liTag.style.display = 'flex';
+        // liTag.style.justifyContent = 'center';
+        // liTag.style.alignItems = 'center';
+        liTag.style.listStyle = 'none';
+        liTag.style.backgroundColor = color;
+        // liTag.innerHTML = color;
         olTag.appendChild(liTag);
     });
 };
 
 
 // 3 etapas
-let colorButton1;
+let colorsList;
 
-colorButton1 = localStorage.getItem('colors_storage');
+colorsList = localStorage.getItem('colors_storage');
 
-console.log(colorButton1);
 
 
 // 4 etapas
-if (null === colorButton1) {
-    colorButton1 = [];
+if (null === colorsList) {
+    colorsList = [];
 } else {
-    colorButton1 = JSON.parse(colorButton1);
+    colorsList = JSON.parse(colorsList);
 };
 
-console.log(colorButton1);
 
 
 // 5 etapas
-const button1Tag = document.querySelector('#btn1');
+const GreenButton = document.querySelector('#green-btn');
+const BlueButton = document.querySelector('#blue-btn');
+const RedButton = document.querySelector('#red-btn');
 
-button1Tag.addEventListener('click', _ => {
 
-    colorButton1.push(greenColorSq);
-    const changingColorsToString = JSON.stringify(colorButton1);
-    localStorage.setItem('colors_storage', changingColorsToString);
-    renderSqColor();
+GreenButton.addEventListener('click', _ => {
+
+    colorsList.push('green');
+    const colorListToString = JSON.stringify(colorsList);
+    localStorage.setItem('colors_storage', colorListToString);
+    renderColor();
 });
 
-console.log(colorButton1);
 
-renderSqColor();
 
+BlueButton.addEventListener('click', _ => {
+
+    colorsList.push('blue');
+    const colorListToString = JSON.stringify(colorsList);
+    localStorage.setItem('colors_storage', colorListToString);
+    renderColor();
+});
+
+
+
+RedButton.addEventListener('click', _ => {
+    
+    colorsList.push('crimson');
+    const changingColorsToString = JSON.stringify(colorsList);
+    localStorage.setItem('colors_storage', changingColorsToString);
+    renderColor();
+});
+
+console.log(colorsList);
+
+renderColor();
+
+// ---------------------------------------------------------------------------------
 
 // const renderList = _ => {
 
