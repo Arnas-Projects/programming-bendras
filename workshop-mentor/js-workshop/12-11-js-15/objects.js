@@ -60,7 +60,16 @@ studentas.introduce();
 
 
 
-
+// Metodai
+ 
+// Object.keys(obj) → grąžina masyvą su raktų vardais
+console.log(Object.keys(studentas));
+ 
+// Object.values(obj) → grąžina masyvą su reišmių vardais
+console.log(Object.values(studentas));
+ 
+// Object.entries(obj) → grąžina masyvų masyvą su raktų/reikšmių  [key, value] poromis
+console.log(Object.entries(studentas));
 
 
 

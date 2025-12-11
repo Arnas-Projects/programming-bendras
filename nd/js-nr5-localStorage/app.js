@@ -1,10 +1,6 @@
 
 
-function rand(min, max) {
-    const minCeiled = Math.ceil(min);
-    const maxFloored = Math.floor(max);
-    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
-}
+
 /*
 
     Yra trys mygtukai: žalias, mėlynas ir raudonas. Paspaudus vieną iš mygtukų jo spalva įsirašo
@@ -16,7 +12,6 @@ function rand(min, max) {
 console.log('Task 1');
 
 
-// 1 etapas
 
 
 // const greenColorSq = rand(5, 20);
@@ -29,7 +24,7 @@ console.log('Task 1');
 
 // const greenColorSqGautas = localStorage.getItem('greenDiv');
 
-// 2 etapas
+// 1 etapas
 const renderColor = _ => {
     const olTag = document.querySelector('ol.color-list')
     olTag.innerHTML = '';
@@ -53,14 +48,14 @@ const renderColor = _ => {
 };
 
 
-// 3 etapas
+// 2 etapas
 let colorsList;
 
 colorsList = localStorage.getItem('colors_storage');
 
 
 
-// 4 etapas
+// 3 etapas
 if (null === colorsList) {
     colorsList = [];
 } else {
@@ -69,12 +64,13 @@ if (null === colorsList) {
 
 
 
-// 5 etapas
+// 4 etapas
 const GreenButton = document.querySelector('#green-btn');
 const BlueButton = document.querySelector('#blue-btn');
 const RedButton = document.querySelector('#red-btn');
 
 
+// 5.1 etapas
 GreenButton.addEventListener('click', _ => {
 
     colorsList.push('green');
@@ -84,7 +80,7 @@ GreenButton.addEventListener('click', _ => {
 });
 
 
-
+// 5.2 etapas
 BlueButton.addEventListener('click', _ => {
 
     colorsList.push('blue');
@@ -94,7 +90,7 @@ BlueButton.addEventListener('click', _ => {
 });
 
 
-
+// 5.3 etapas
 RedButton.addEventListener('click', _ => {
     
     colorsList.push('crimson');
@@ -105,6 +101,7 @@ RedButton.addEventListener('click', _ => {
 
 console.log(colorsList);
 
+// 6 etapas
 renderColor();
 
 // ---------------------------------------------------------------------------------
