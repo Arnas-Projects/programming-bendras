@@ -197,8 +197,35 @@ SingleWordArrayA.forEach(zveriukas => {
 
 console.log('\nTask 7');
 
+const section7 = document.querySelector('section.task7-sect');
 
 
+// 1-as variantas - su forEach  <===== NESĄMONĖ ČIA, O NE SINTAKSĖ...
+
+B.forEach(gyvunas => {
+
+    gyvunas.split('').forEach(atskiraGyvunoRaide => {
+
+        const gyvunoRaidesTagas = document.createElement('span');
+        gyvunoRaidesTagas.innerText = atskiraGyvunoRaide;
+        gyvunoRaidesTagas.classList.add('task7-span');
+        section7.appendChild(gyvunoRaidesTagas);
+        // console.log(atskiraGyvunoRaide);
+    });
+});
+
+
+// // 2-as variantas - su FOR ciklu cikle
+
+// for (let i = 0; i < B.length; i++) {
+
+//     for (let j = 0; j < B[i].length; j++) {
+//         const gyvunoRaidesTagas = document.createElement('span');
+//         gyvunoRaidesTagas.innerText = B[i][j];
+//         gyvunoRaidesTagas.classList.add('task7-span');
+//         section7.appendChild(gyvunoRaidesTagas); 
+//     };
+// };
 
 
 
