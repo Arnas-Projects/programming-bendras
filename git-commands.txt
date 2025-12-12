@@ -1,0 +1,54 @@
+1. Kai supushinai folderius / failus, .gitignore nebeveiks, 
+jei norėsi vėliau įgnoruoti JAU SUPUSHINTUS folderius / failus.
+Tokiu atveju reik naudotis šituo metodu:
+
+
+Reik atsidaryti terminalą bendrame "motininiame" projekto folderyje.
+
+Pvz, jei folderis, kurį norim ignoruoti randasi:
+C:\Users\Arnas\Desktop\BITProjektai\grupe5\homework\invoice-javascript\ ,
+
+Tada reik atsidaryti terminalą šitam folderyje:
+C:\Users\Arnas\Desktop\BITProjektai\grupe5\
+
+Run this inside your project folder:
+
+git rm -r --cached homework/invoice-javascript     <<<<<================
+
+
+This:
+
+removes the folder from Git’s tracking
+
+does NOT delete it from your computer
+
+tells Git “stop watching this folder now”
+
+Then commit the change:
+
+git commit -m "Stop tracking invoice-javascript folder"   <<<<<<<====================
+
+
+Then push:
+
+git push (arba per VSCode "Source Control" 'Sync changes')     <<<<<===================
+
+
+Now .gitignore will finally start ignoring the folder.     <<<<<============= Dabar .gitignore komanda vėl veiks
+
+⭐ DOUBLE-CHECK your .gitignore syntax
+
+Your .gitignore entry:
+
+homework/invoice-javascript/
+
+
+is correct given your repo structure:
+
+grupe5/
+   homework/
+      invoice-javascript/
+
+
+----------------------------------------------------------------------------------------------------------------------
+
